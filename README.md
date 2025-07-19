@@ -3,47 +3,43 @@
 This is an anonymous artifact repository used for ICSE 2026
 
 ## Title: Modeling Like Peeling an Onion: Layerwise Analysis-Driven Automatic Behavioral Model Generation
-
-<figure align="center">
-  <img src="Figures/motivation.png" alt="" />
-  <figcaption>Figure 1. Motivation</figcaption>
-</figure>
+<div align="center">
+  <img src="Figures/motivation.png" alt="Motivation" />
+  <p><em>Figure 1. Motivation</em></p>
+</div>
 
 ### Abstract
 As software complexity skyrockets and requirements evolve at breakneck speed, traditional human-centric behavioral modeling can no longer keep pace in terms of efficiency, accuracy, and scalability. While existing automated approaches can produce models, they still struggle with deep semantic understanding of textual requirements or with reasoning about intricate system logic, especially nested relationships. Inspired by the way seasoned analysts “peel back” layers of a problem, we propose **AutoBM**, an LLM-based framework that incrementally extracts behavioral nodes, dissects their hierarchical relations, and synthesizes them into executable, interpretable UML activity diagrams. Comprehensive evaluations on four open‑source datasets and two real‑world industrial systems show that AutoBM comprehensively outperforms state-of-the-art baselines in accuracy, completeness, and syntactic compliance: _F₁_ scores for behavioral node-extraction improve by up to 71.1 %, relation-extraction _F₁_ by 52.4 % relatively, and syntactic pass rates remain above 96.7 %. The framework also exhibits strong robustness to input perturbations, confirming its cross-domain generalizability. This paper is the first to tightly fuse human-inspired strategies with LLMs in behavior modeling, yielding an intelligent infrastructure that exhibits human-level logical understanding and generalization. By closing the modeling-skills gap, AutoBM delivers a next-generation, low-cost, and explainable solution for requirements engineering and AI-native software development.
 
 ### Dataset
 We conduct experiments on six datasets, with their statistics summarized as follows:
-
 - **Functional Scenario Descriptions (FSD)** comprises 116 natural language descriptions from embedded systems, encompassing deeply nested functional behaviors such as device control, data processing, and fault handling.
 - **Real Automotive Case (RAC)** contains 20 requirement scenarios from the automotive domain, representing typical control logic and communication processes.
-- **PURE Dataset (PURE)** [\[pure\]](#) consists of 79 documents across multiple application domains and formats. For our evaluation, we extract 99 textual samples from simulated function-response sequences.
-- **Business Process Dataset (BP)** [\[tag\]](#) includes 30 examples of business software requirements, covering a range of operational scenarios.
-- **User Stories Dataset (US)** [\[userstory\]](#) comprises 22 sets of user stories collected from various open-source projects, reflecting typical agile requirements.
-- **LM Challenges (LMC)** [\[lmc\]](#) features 10 requirements documents from the cyber-physical systems domain.
+- **PURE Dataset (PURE)** [\[pure\]](https://zenodo.org/records/1414117) consists of 79 documents across multiple application domains and formats.
+- **Business Process Dataset (BP)** [\[bp\]](https://github.com/lwx142857/bussiness-process) includes 30 examples of business software requirements, covering a range of operational scenarios.
+- **User Stories Dataset (US)** [\[userstory\]](https://zenodo.org/records/13880060) comprises 22 sets of user stories collected from various open-source projects, reflecting typical agile requirements.
+- **LM Challenges (LMC)** [\[lmc\]](https://github.com/hbourbouh/lm_challenges) features 10 requirements documents from the cyber-physical systems domain.
 
 ### Approach
-<figure align="center">
-  <img src="Figures/overview.png" alt="" />
-  <figcaption>Figure 2. Overview</figcaption>
-</figure>
+<div align="center">
+  <img src="Figures/overview.png" alt="Overview" />
+  <p><em>Figure 2. Overview</em></p>
+</div>
 
-<figure align="center">
-  <img src="Figures/identify.png" width="50%" alt="Decompose step" />
-  <figcaption>Figure 3. Identify Step Prompt</figcaption>
-</figure>
+<div align="center">
+  <img src="Figures/identify.png" width="50%" alt="Identify step prompt" />
+  <p><em>Figure 3. Identify Step Prompt</em></p>
+</div>
 
-<figure align="center">
-  <img src="Figures/decompose.png" width="50%" alt="Decompose step" />
-  <figcaption>Figure 4. Extract Step Prompt</figcaption>
-</figure>
+<div align="center">
+  <img src="Figures/decompose.png" width="50%" alt="Decompose step prompt" />
+  <p><em>Figure 4. Extract Step Prompt</em></p>
+</div>
 
-<figure align="center">
-  <img src="Figures/integrate.png" width="50%" alt="Integrate step" />
-  <figcaption>Figure 5. Integrate Step Prompt</figcaption>
-</figure>
-
-
+<div align="center">
+  <img src="Figures/integrate.png" width="50%" alt="Integrate step prompt" />
+  <p><em>Figure 5. Integrate Step Prompt</em></p>
+</div>
 ### Experimental Results
 
 #### Table I. Average Performance Scores on Behavioral Node and Relation Extraction for Each Method
@@ -94,10 +90,10 @@ We conduct experiments on six datasets, with their statistics summarized as foll
 | `glm-4-air`     |**0.6943**   | 0.7735   |**0.7318**|**0.4771**|0.4020   | 0.4364|**0.9548**|
 | `glm-4-plus`    | 0.6181      |**0.8105**| 0.7013| 0.4105      |**0.4841**|**0.4443**|0.9392   |
 
-<figure align="center">
-  <img src="Figures/llm.png" alt="" />
-  <figcaption>Figure 6.  Different Base Models</figcaption>
-</figure>
+<div align="center">
+  <img src="Figures/llm.png" alt="Different Base Models" />
+  <p><em>Figure 6. Different Base Models</em></p>
+</div>
 
 #### Table IV. The Performance Scores of AutoBM with Different Example Seeds
 
