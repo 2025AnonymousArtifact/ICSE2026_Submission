@@ -41,7 +41,7 @@ We conduct experiments on six datasets, with their statistics summarized as foll
   <p><em>Figure 5. Integrate Step Prompt</em></p>
 </div>
 
-### Requirements
+### Tools Requirements
 - PlantUML: plantuml-1.2025.4.jar
 - StanfordNLP: CoreNLP 4.5.10
 - FastCoref: fastcoref 2.1.6
