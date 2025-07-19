@@ -4,7 +4,7 @@ This is an anonymous artifact repository used for ICSE 2026
 
 ## Modeling Like Peeling an Onion: Layerwise Analysis-Driven Automatic Behavioral Model Generation
 
-![](Figures/motivation.pdf)
+![](Figures/motivation.png)
 
 ### Abstract
 
@@ -23,11 +23,11 @@ We conduct experiments on six datasets, with their statistics summarized as foll
 
 ### Approach
 
-![](Figures/overview.pdf)  
-![](Figures/dec.pdf)  
-![](Figures/identify.pdf)  
-![](Figures/decompose.pdf)  
-![](Figures/integrate.pdf)  
+![](Figures/overview.png)  
+![](Figures/dec.png)  
+![](Figures/identify.png)  
+![](Figures/decompose.png)  
+![](Figures/integrate.png)  
 
 ### Experimental Results
 
@@ -79,7 +79,7 @@ We conduct experiments on six datasets, with their statistics summarized as foll
 | `glm-4-air`     |**0.6943**   | 0.7735   |**0.7318**|**0.4771**|0.4020   | 0.4364|**0.9548**|
 | `glm-4-plus`    | 0.6181      |**0.8105**| 0.7013| 0.4105      |**0.4841**|**0.4443**|0.9392   |
 
-![](Figures/llm.pdf)
+![](Figures/llm.png)
 
 #### Table 6. The Performance Scores of AutoBM with Different Example Seeds
 
