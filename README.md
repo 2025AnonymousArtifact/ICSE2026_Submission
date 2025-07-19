@@ -40,6 +40,13 @@ We conduct experiments on six datasets, with their statistics summarized as foll
   <img src="Figures/integrate.png" width="50%" alt="Integrate step prompt" />
   <p><em>Figure 5. Integrate Step Prompt</em></p>
 </div>
+
+### Requirements
+- PlantUML: plantuml-1.2025.4.jar
+- StanfordNLP: CoreNLP 4.5.10
+- FastCoref: fastcoref 2.1.6
+- en_core_web_sm-3.8.0.tar
+
 ### Experimental Results
 
 #### Table I. Average Performance Scores on Behavioral Node and Relation Extraction for Each Method
