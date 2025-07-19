@@ -2,16 +2,14 @@
 
 This is an anonymous artifact repository used for ICSE 2026
 
-## Modeling Like Peeling an Onion: Layerwise Analysis-Driven Automatic Behavioral Model Generation
+## Title: Modeling Like Peeling an Onion: Layerwise Analysis-Driven Automatic Behavioral Model Generation
 
 ![](Figures/motivation.png)
 
 ### Abstract
-
 As software complexity skyrockets and requirements evolve at breakneck speed, traditional human-centric behavioral modeling can no longer keep pace in terms of efficiency, accuracy, and scalability. While existing automated approaches can produce models, they still struggle with deep semantic understanding of textual requirements or with reasoning about intricate system logic, especially nested relationships. Inspired by the way seasoned analysts “peel back” layers of a problem, we propose **AutoBM**, an LLM-based framework that incrementally extracts behavioral nodes, dissects their hierarchical relations, and synthesizes them into executable, interpretable UML activity diagrams. Comprehensive evaluations on four open‑source datasets and two real‑world industrial systems show that AutoBM comprehensively outperforms state-of-the-art baselines in accuracy, completeness, and syntactic compliance: _F₁_ scores for behavioral node-extraction improve by up to 71.1 %, relation-extraction _F₁_ by 52.4 % relatively, and syntactic pass rates remain above 96.7 %. The framework also exhibits strong robustness to input perturbations, confirming its cross-domain generalizability. This paper is the first to tightly fuse human-inspired strategies with LLMs in behavior modeling, yielding an intelligent infrastructure that exhibits human-level logical understanding and generalization. By closing the modeling-skills gap, AutoBM delivers a next-generation, low-cost, and explainable solution for requirements engineering and AI-native software development.
 
 ### Dataset
-
 We conduct experiments on six datasets, with their statistics summarized as follows:
 
 - **Functional Scenario Descriptions (FSD)** comprises 116 natural language descriptions from embedded systems, encompassing deeply nested functional behaviors such as device control, data processing, and fault handling.
@@ -22,16 +20,16 @@ We conduct experiments on six datasets, with their statistics summarized as foll
 - **LM Challenges (LMC)** [\[lmc\]](#) features 10 requirements documents from the cyber-physical systems domain.
 
 ### Approach
-
 ![](Figures/overview.png)  
-![](Figures/dec.png)  
-![](Figures/identify.png)  
-![](Figures/decompose.png)  
-![](Figures/integrate.png)  
+<p align="center">
+  <img src="Figures/identify.pdf" width="50%" alt="Identify step" /><br>
+  <img src="Figures/decompose.pdf" width="50%" alt="Decompose step" /><br>
+  <img src="Figures/integrate.pdf" width="50%" alt="Integrate step" />
+</p>
 
 ### Experimental Results
 
-#### Table 2. Average Performance Scores on Behavioral Node and Relation Extraction for Each Method
+#### Table I. Average Performance Scores on Behavioral Node and Relation Extraction for Each Method
 
 | Dataset | Metric     | Zero-shot | Few-shot | CoT    | **AutoBM** | Zero-shot | Few-shot | CoT    | **AutoBM** |
 |:-------:|:-----------|:---------:|:--------:|:------:|:----------:|:---------:|:--------:|:------:|:----------:|
@@ -54,7 +52,7 @@ We conduct experiments on six datasets, with their statistics summarized as foll
 |         | **Recall**    | 0.4524    | 0.5107   | 0.5031 | **0.5570** | 0.6830    | 0.7108   | 0.8048 | **0.7293** |
 |         | **F₁**         | 0.4793    | 0.5479   | 0.4788 | **0.5931** | 0.7408    | 0.7773   | 0.7750 | **0.7892** |
 
-#### Table 4. Average Pass Rate for Each Method
+#### Table II. Average Pass Rate for Each Method
 
 | Dataset | Zero-shot | Few-shot | CoT    | **AutoBM** |
 |:-------:|:---------:|:--------:|:------:|:----------:|
@@ -65,7 +63,7 @@ We conduct experiments on six datasets, with their statistics summarized as foll
 | US      |   0.9814  |  0.9506  | 0.9257 | **0.9914** |
 | LMC     |   0.9879  |  0.9750  | 0.9743 | **0.9936** |
 
-#### Table 7. The Performance Score of AutoBM with Different Base Models
+#### Table III. The Performance Score of AutoBM with Different Base Models
 
 | LLM             | N‑Precision | N‑Recall | N‑F₁  | R‑Precision | R‑Recall | R‑F₁  | Pass Rate |
 |:---------------:|:-----------:|:--------:|:-----:|:-----------:|:--------:|:-----:|:---------:|
@@ -81,7 +79,7 @@ We conduct experiments on six datasets, with their statistics summarized as foll
 
 ![](Figures/llm.png)
 
-#### Table 6. The Performance Scores of AutoBM with Different Example Seeds
+#### Table IV. The Performance Scores of AutoBM with Different Example Seeds
 
 | Seed   | N‑Precision | N‑Recall | N‑F₁  |         | R‑Precision | R‑Recall | R‑F₁  |         | Pass Rate |        |
 |:------:|:-----------:|:--------:|:-----:|:-------:|:-----------:|:--------:|:-----:|:-------:|:---------:|:------:|
@@ -89,7 +87,7 @@ We conduct experiments on six datasets, with their statistics summarized as foll
 | Seed B | 0.6840      | 0.8255   | 0.7492| _0.73 %↓_| 0.4821      | 0.5010   | 0.4898| _3.47 %↓_| 0.9676    | _0.33 %↓_ |
 | Seed C | 0.6702      | 0.8123   | 0.7350| _2.61 %↓_| 0.4955      | 0.5108   | 0.5035| _0.77 %↓_| 0.9690    | _0.18 %↓_ |
 
-#### Table 8. The Results of Ablation Study
+#### Table V. The Results of Ablation Study
 
 | Configuration            | N‑Precision | N‑Recall | N‑F₁  |         | R‑Precision | R‑Recall | R‑F₁  |         | Pass Rate |        |
 |:------------------------:|:-----------:|:--------:|:-----:|:-------:|:-----------:|:--------:|:-----:|:-------:|:---------:|:------:|
