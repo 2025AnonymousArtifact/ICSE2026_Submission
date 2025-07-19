@@ -4,7 +4,10 @@ This is an anonymous artifact repository used for ICSE 2026
 
 ## Title: Modeling Like Peeling an Onion: Layerwise Analysis-Driven Automatic Behavioral Model Generation
 
-![](Figures/motivation.png)
+<figure align="center">
+  <img src="Figures/motivation.png" alt="" />
+  <figcaption>Figure 1. Motivation</figcaption>
+</figure>
 
 ### Abstract
 As software complexity skyrockets and requirements evolve at breakneck speed, traditional human-centric behavioral modeling can no longer keep pace in terms of efficiency, accuracy, and scalability. While existing automated approaches can produce models, they still struggle with deep semantic understanding of textual requirements or with reasoning about intricate system logic, especially nested relationships. Inspired by the way seasoned analysts “peel back” layers of a problem, we propose **AutoBM**, an LLM-based framework that incrementally extracts behavioral nodes, dissects their hierarchical relations, and synthesizes them into executable, interpretable UML activity diagrams. Comprehensive evaluations on four open‑source datasets and two real‑world industrial systems show that AutoBM comprehensively outperforms state-of-the-art baselines in accuracy, completeness, and syntactic compliance: _F₁_ scores for behavioral node-extraction improve by up to 71.1 %, relation-extraction _F₁_ by 52.4 % relatively, and syntactic pass rates remain above 96.7 %. The framework also exhibits strong robustness to input perturbations, confirming its cross-domain generalizability. This paper is the first to tightly fuse human-inspired strategies with LLMs in behavior modeling, yielding an intelligent infrastructure that exhibits human-level logical understanding and generalization. By closing the modeling-skills gap, AutoBM delivers a next-generation, low-cost, and explainable solution for requirements engineering and AI-native software development.
@@ -20,12 +23,26 @@ We conduct experiments on six datasets, with their statistics summarized as foll
 - **LM Challenges (LMC)** [\[lmc\]](#) features 10 requirements documents from the cyber-physical systems domain.
 
 ### Approach
-![](Figures/overview.png)  
-<p align="center">
-  <img src="Figures/identify.png" width="50%" alt="" /><br>
-  <img src="Figures/decompose.png" width="50%" alt="" /><br>
-  <img src="Figures/integrate.png" width="50%" alt="" />
-</p>
+<figure align="center">
+  <img src="Figures/overview.png" alt="" />
+  <figcaption>Figure 2. Overview</figcaption>
+</figure>
+
+<figure align="center">
+  <img src="Figures/identify.png" width="50%" alt="Decompose step" />
+  <figcaption>Figure 3. Identify Step Prompt</figcaption>
+</figure>
+
+<figure align="center">
+  <img src="Figures/decompose.png" width="50%" alt="Decompose step" />
+  <figcaption>Figure 4. Extract Step Prompt</figcaption>
+</figure>
+
+<figure align="center">
+  <img src="Figures/integrate.png" width="50%" alt="Integrate step" />
+  <figcaption>Figure 5. Integrate Step Prompt</figcaption>
+</figure>
+
 
 ### Experimental Results
 
@@ -77,7 +94,10 @@ We conduct experiments on six datasets, with their statistics summarized as foll
 | `glm-4-air`     |**0.6943**   | 0.7735   |**0.7318**|**0.4771**|0.4020   | 0.4364|**0.9548**|
 | `glm-4-plus`    | 0.6181      |**0.8105**| 0.7013| 0.4105      |**0.4841**|**0.4443**|0.9392   |
 
-![](Figures/llm.png)
+<figure align="center">
+  <img src="Figures/llm.png" alt="" />
+  <figcaption>Figure 6.  Different Base Models</figcaption>
+</figure>
 
 #### Table IV. The Performance Scores of AutoBM with Different Example Seeds
 
