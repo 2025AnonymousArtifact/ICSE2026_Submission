@@ -22,9 +22,9 @@ We conduct experiments on six datasets, with their statistics summarized as foll
 ### Approach
 ![](Figures/overview.png)  
 <p align="center">
-  <img src="Figures/identify.pdf" width="50%" alt="Identify step" /><br>
-  <img src="Figures/decompose.pdf" width="50%" alt="Decompose step" /><br>
-  <img src="Figures/integrate.pdf" width="50%" alt="Integrate step" />
+  <img src="Figures/identify.png" width="50%" alt="" /><br>
+  <img src="Figures/decompose.png" width="50%" alt="" /><br>
+  <img src="Figures/integrate.png" width="50%" alt="" />
 </p>
 
 ### Experimental Results
