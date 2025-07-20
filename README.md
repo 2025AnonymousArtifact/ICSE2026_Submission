@@ -103,7 +103,7 @@ We conduct experiments on six datasets, with their statistics summarized as foll
 <br>
 <div align="center">
   <img src="Figures/llm.png" alt="Different Base Models" width="80%"/>
-  <p><em>Figure 7. Different Base Models</em></p>
+  <p><em>Figure 7. Performance comparison of AutoBM with different base models. Indicators A–G correspond to the $Precision$, $Recall$, and $F_{1}$ score for both nodes and relations, along with the overall $Pass Rate$. The value in brackets indicates the highest score achieved in the current comparison.</em></p>
 </div>
 
 
