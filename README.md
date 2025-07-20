@@ -4,7 +4,7 @@ This is an anonymous artifact repository used for ICSE 2026
 
 ## Title: Modeling Like Peeling an Onion: Layerwise Analysis-Driven Automatic Behavioral Model Generation
 <div align="center">
-  <img src="Figures/motivation.png" alt="Motivation" />
+  <img src="Figures/motivation.png" alt="Motivation" width="85%"/>
   <p><em>Figure 1. Motivation</em></p>
 </div>
 
@@ -15,10 +15,10 @@ As software complexity skyrockets and requirements evolve at breakneck speed, tr
 We conduct experiments on six datasets, with their statistics summarized as follows:
 - **Functional Scenario Descriptions (FSD)** comprises 116 natural language descriptions from embedded systems, encompassing deeply nested functional behaviors such as device control, data processing, and fault handling.
 - **Real Automotive Case (RAC)** contains 20 requirement scenarios from the automotive domain, representing typical control logic and communication processes.
-- **PURE Dataset (PURE)** [\[pure\]](https://zenodo.org/records/1414117) consists of 79 documents across multiple application domains and formats.
-- **Business Process Dataset (BP)** [\[bp\]](https://github.com/lwx142857/bussiness-process) includes 30 examples of business software requirements, covering a range of operational scenarios.
-- **User Stories Dataset (US)** [\[userstory\]](https://zenodo.org/records/13880060) comprises 22 sets of user stories collected from various open-source projects, reflecting typical agile requirements.
-- **LM Challenges (LMC)** [\[lmc\]](https://github.com/hbourbouh/lm_challenges) features 10 requirements documents from the cyber-physical systems domain.
+- **PURE Dataset (PURE)** [\[Public Requirements Documents\]](https://zenodo.org/records/1414117) consists of 79 documents across multiple application domains and formats.
+- **Business Process Dataset (BP)** [\[bussiness-process\]](https://github.com/lwx142857/bussiness-process) includes 30 examples of business software requirements, covering a range of operational scenarios.
+- **User Stories Dataset (US)** [\[Requirements data sets (user stories)\]](https://zenodo.org/records/13880060) comprises 22 sets of user stories collected from various open-source projects, reflecting typical agile requirements.
+- **LM Challenges (LMC)** [\[The Ten Lockheed Martin Cyber-Physical Challenges\]](https://github.com/hbourbouh/lm_challenges) features 10 requirements documents from the cyber-physical systems domain.
 
 ### Approach
 <div align="center">
@@ -26,19 +26,18 @@ We conduct experiments on six datasets, with their statistics summarized as foll
   <p><em>Figure 2. Overview</em></p>
 </div>
 
-<div align="center">
-  <img src="Figures/identify.png" width="50%" alt="Identify step prompt" />
-  <p><em>Figure 3. Identify Step Prompt</em></p>
-</div>
+<p align="center">
+  <img src="Figures/identify.png" width="30%" />
+  <img src="Figures/decompose.png" width="30%" />
+  <img src="Figures/integrate.png" width="30%" />
+</p>
 
-<div align="center">
-  <img src="Figures/decompose.png" width="50%" alt="Decompose step prompt" />
-  <p><em>Figure 4. Extract Step Prompt</em></p>
-</div>
+<p align="center"><em>Figure 3–5. Step Prompt Template for AutoBM</em></p>
 
+### Generated Result Example
 <div align="center">
-  <img src="Figures/integrate.png" width="50%" alt="Integrate step prompt" />
-  <p><em>Figure 5. Integrate Step Prompt</em></p>
+  <img src="Figures/result.png" width="75%" alt="" />
+  <p><em>Figure 6. Generated Result by AutoBM</em></p>
 </div>
 
 ### Tools Requirements
@@ -49,7 +48,9 @@ We conduct experiments on six datasets, with their statistics summarized as foll
 
 ### Experimental Results
 
-#### Table I. Average Performance Scores on Behavioral Node and Relation Extraction for Each Method
+<div align="center">
+  
+  #### Table I. Average Performance Scores on Behavioral Node and Relation Extraction for Each Method
 
 | Dataset | Metric     | Zero-shot | Few-shot | CoT    | **AutoBM** | Zero-shot | Few-shot | CoT    | **AutoBM** |
 |:-------:|:-----------|:---------:|:--------:|:------:|:----------:|:---------:|:--------:|:------:|:----------:|
@@ -97,11 +98,17 @@ We conduct experiments on six datasets, with their statistics summarized as foll
 | `glm-4-air`     |**0.6943**   | 0.7735   |**0.7318**|**0.4771**|0.4020   | 0.4364|**0.9548**|
 | `glm-4-plus`    | 0.6181      |**0.8105**| 0.7013| 0.4105      |**0.4841**|**0.4443**|0.9392   |
 
-<div align="center">
-  <img src="Figures/llm.png" alt="Different Base Models" />
-  <p><em>Figure 6. Different Base Models</em></p>
 </div>
 
+<br>
+<div align="center">
+  <img src="Figures/llm.png" alt="Different Base Models" width="80%"/>
+  <p><em>Figure 7. Different Base Models</em></p>
+</div>
+
+
+<div align="center">
+  
 #### Table IV. The Performance Scores of AutoBM with Different Example Seeds
 
 | Seed   | N‑Precision | N‑Recall | N‑F₁  |         | R‑Precision | R‑Recall | R‑F₁  |         | Pass Rate |        |
@@ -118,3 +125,5 @@ We conduct experiments on six datasets, with their statistics summarized as foll
 | _w/o Identifier_         | 0.6356      | 0.7257   | 0.6777| _10.20 %↓_| 0.4178      | 0.4003   | 0.4089| _19.41 %↓_| 0.9614    | _0.97 %↓_ |
 | _w/o Extractor_          | 0.6232      | 0.7288   | 0.6719| _10.97 %↓_| 0.3919      | 0.3886   | 0.3902| _23.10 %↓_| 0.9592    | _1.19 %↓_ |
 | _w/o Constructor_        | 0.6019      | 0.6687   | 0.6336| _16.05 %↓_| 0.3519      | 0.3283   | 0.3397| _33.06 %↓_| 0.9316    | _4.04 %↓_ |
+
+</div>
