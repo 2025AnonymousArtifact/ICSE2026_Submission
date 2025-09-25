@@ -52,26 +52,141 @@ We conduct experiments on six datasets, with their statistics summarized as foll
   
   #### Table I. Average Performance Scores on Behavioral Node and Relation Extraction for Each Method
 
-| Dataset | Metric     | Zero-shot | Few-shot | CoT    | **AutoBM** | Zero-shot | Few-shot | CoT    | **AutoBM** |
-|:-------:|:-----------|:---------:|:--------:|:------:|:----------:|:---------:|:--------:|:------:|:----------:|
-| **FSD** | **Precision** | 0.6821    | 0.7540   | 0.7913 | **0.8654** | 0.6606    | 0.6544   | 0.5651 | **0.7111** |
-|         | **Recall**    | 0.5932    | 0.7107   | 0.7481 | **0.8322** | 0.3711    | 0.4124   | 0.4420 | **0.5296** |
-|         | **F₁**         | 0.6348    | 0.7318   | 0.7692 | **0.8484** | 0.4752    | 0.5059   | 0.4960 | **0.6071** |
-| **RAC** | **Precision** | 0.6939    | 0.7500   | 0.6877 | **0.6905** | 0.4419    | 0.4713   | 0.3777 | **0.5008** |
-|         | **Recall**    | 0.7858    | 0.7812   | 0.7904 | **0.8320** | 0.3953    | 0.3853   | 0.3568 | **0.5142** |
-|         | **F₁**         | 0.7370    | 0.7653   | 0.7355 | **0.7547** | 0.4173    | 0.4240   | 0.3669 | **0.5074** |
-| **PURE**| **Precision** | 0.7430    | 0.7925   | 0.8147 | **0.8891** | 0.5095    | 0.5910   | 0.4568 | **0.6341** |
-|         | **Recall**    | 0.6654    | 0.7586   | 0.7852 | **0.8597** | 0.4524    | 0.5107   | 0.5031 | **0.5570** |
-|         | **F₁**         | 0.7023    | 0.7752   | 0.7998 | **0.8742** | 0.4793    | 0.5479   | 0.4788 | **0.5931** |
-| **BP**  | **Precision** | 0.6538    | 0.6717   | 0.5341 | **0.6515** | 0.4043    | 0.4586   | 0.3156 | **0.4523** |
-|         | **Recall**    | 0.3479    | 0.4008   | 0.4536 | **0.5180** | 0.2129    | 0.2717   | 0.2661 | **0.3655** |
-|         | **F₁**         | 0.4542    | 0.5020   | 0.4906 | **0.5772** | 0.2789    | 0.3412   | 0.2888 | **0.4043** |
-| **US**  | **Precision** | 0.2210    | 0.2541   | 0.1214 | **0.5265** | 0.2914    | 0.3186   | 0.1629 | **0.5969** |
-|         | **Recall**    | 0.6498    | 0.6756   | 0.6327 | **0.7895** | 0.9700    | 0.9543   | 0.9180 | **0.9329** |
-|         | **F₁**         | 0.3299    | 0.3693   | 0.2037 | **0.6317** | 0.4482    | 0.4777   | 0.2802 | **0.7280** |
-| **LMC** | **Precision** | 0.5095    | 0.5910   | 0.4568 | **0.6341** | 0.8093    | 0.8574   | 0.7474 | **0.8598** |
-|         | **Recall**    | 0.4524    | 0.5107   | 0.5031 | **0.5570** | 0.6830    | 0.7108   | 0.8048 | **0.7293** |
-|         | **F₁**         | 0.4793    | 0.5479   | 0.4788 | **0.5931** | 0.7408    | 0.7773   | 0.7750 | **0.7892** |
+<table border="1" cellspacing="0" cellpadding="6" style="border-collapse: collapse; text-align: center;">
+  <tr>
+    <th rowspan="2">Dataset</th>
+    <th rowspan="2">Metric</th>
+    <th colspan="4">Node</th>
+    <th rowspan="2">Gain%</th>
+    <th colspan="4">Relation</th>
+    <th rowspan="2">Gain%</th>
+  </tr>
+  <tr>
+    <th>Zero-shot</th><th>Few-shot</th><th>CoT</th><th><b>AutoBM</b></th>
+    <th>Zero-shot</th><th>Few-shot</th><th>CoT</th><th><b>AutoBM</b></th>
+  </tr>
+
+  <!-- FSD -->
+  <tr>
+    <td rowspan="3"><b>FSD</b></td>
+    <td><b>Precision</b></td>
+    <td>0.6821</td><td>0.7540</td><td>0.7913</td><td><b>0.8654</b></td>
+    <td rowspan="3" style="font-weight:bold; color:green;">+10.3%</td>
+    <td>0.6606</td><td>0.6544</td><td>0.5651</td><td><b>0.7111</b></td>
+    <td rowspan="3" style="font-weight:bold; color:green;">+20.0%</td>
+  </tr>
+  <tr>
+    <td><b>Recall</b></td>
+    <td>0.5932</td><td>0.7107</td><td>0.7481</td><td><b>0.8322</b></td>
+    <td>0.3711</td><td>0.4124</td><td>0.4420</td><td><b>0.5296</b></td>
+  </tr>
+  <tr>
+    <td><b>F₁</b></td>
+    <td>0.6348</td><td>0.7318</td><td>0.7692</td><td><b>0.8484</b></td>
+    <td>0.4752</td><td>0.5059</td><td>0.4960</td><td><b>0.6071</b></td>
+  </tr>
+
+  <!-- RAC -->
+  <tr>
+    <td rowspan="3"><b>RAC</b></td>
+    <td><b>Precision</b></td>
+    <td>0.6939</td><td>0.7500</td><td>0.6877</td><td><b>0.6905</b></td>
+    <td rowspan="3" style="font-weight:bold; color:red;">−1.4%</td>
+    <td>0.4419</td><td>0.4713</td><td>0.3777</td><td><b>0.5008</b></td>
+    <td rowspan="3" style="font-weight:bold; color:green;">+19.7%</td>
+  </tr>
+  <tr>
+    <td><b>Recall</b></td>
+    <td>0.7858</td><td>0.7812</td><td>0.7904</td><td><b>0.8320</b></td>
+    <td>0.3953</td><td>0.3853</td><td>0.3568</td><td><b>0.5142</b></td>
+  </tr>
+  <tr>
+    <td><b>F₁</b></td>
+    <td>0.7370</td><td>0.7653</td><td>0.7355</td><td><b>0.7547</b></td>
+    <td>0.4173</td><td>0.4240</td><td>0.3669</td><td><b>0.5074</b></td>
+  </tr>
+
+  <!-- PURE -->
+  <tr>
+    <td rowspan="3"><b>PURE</b></td>
+    <td><b>Precision</b></td>
+    <td>0.7430</td><td>0.7925</td><td>0.8147</td><td><b>0.8891</b></td>
+    <td rowspan="3" style="font-weight:bold; color:green;">+9.3%</td>
+    <td>0.5095</td><td>0.5910</td><td>0.4568</td><td><b>0.6341</b></td>
+    <td rowspan="3" style="font-weight:bold; color:green;">+8.3%</td>
+  </tr>
+  <tr>
+    <td><b>Recall</b></td>
+    <td>0.6654</td><td>0.7586</td><td>0.7852</td><td><b>0.8597</b></td>
+    <td>0.4524</td><td>0.5107</td><td>0.5031</td><td><b>0.5570</b></td>
+  </tr>
+  <tr>
+    <td><b>F₁</b></td>
+    <td>0.7023</td><td>0.7752</td><td>0.7998</td><td><b>0.8742</b></td>
+    <td>0.4793</td><td>0.5479</td><td>0.4788</td><td><b>0.5931</b></td>
+  </tr>
+
+  <!-- BP -->
+  <tr>
+    <td rowspan="3"><b>BP</b></td>
+    <td><b>Precision</b></td>
+    <td>0.6538</td><td>0.6717</td><td>0.5341</td><td><b>0.6515</b></td>
+    <td rowspan="3" style="font-weight:bold; color:green;">+15.0%</td>
+    <td>0.4043</td><td>0.4586</td><td>0.3156</td><td><b>0.4523</b></td>
+    <td rowspan="3" style="font-weight:bold; color:green;">+18.5%</td>
+  </tr>
+  <tr>
+    <td><b>Recall</b></td>
+    <td>0.3479</td><td>0.4008</td><td>0.4536</td><td><b>0.5180</b></td>
+    <td>0.2129</td><td>0.2717</td><td>0.2661</td><td><b>0.3655</b></td>
+  </tr>
+  <tr>
+    <td><b>F₁</b></td>
+    <td>0.4542</td><td>0.5020</td><td>0.4906</td><td><b>0.5772</b></td>
+    <td>0.2789</td><td>0.3412</td><td>0.2888</td><td><b>0.4043</b></td>
+  </tr>
+
+  <!-- US -->
+  <tr>
+    <td rowspan="3"><b>US</b></td>
+    <td><b>Precision</b></td>
+    <td>0.2210</td><td>0.2541</td><td>0.1214</td><td><b>0.5265</b></td>
+    <td rowspan="3" style="font-weight:bold; color:green;">+71.1%</td>
+    <td>0.2914</td><td>0.3186</td><td>0.1629</td><td><b>0.5969</b></td>
+    <td rowspan="3" style="font-weight:bold; color:green;">+52.4%</td>
+  </tr>
+  <tr>
+    <td><b>Recall</b></td>
+    <td>0.6498</td><td>0.6756</td><td>0.6327</td><td><b>0.7895</b></td>
+    <td>0.9700</td><td>0.9543</td><td>0.9180</td><td><b>0.9329</b></td>
+  </tr>
+  <tr>
+    <td><b>F₁</b></td>
+    <td>0.3299</td><td>0.3693</td><td>0.2037</td><td><b>0.6317</b></td>
+    <td>0.4482</td><td>0.4777</td><td>0.2802</td><td><b>0.7280</b></td>
+  </tr>
+
+  <!-- LMC -->
+  <tr>
+    <td rowspan="3"><b>LMC</b></td>
+    <td><b>Precision</b></td>
+    <td>0.5095</td><td>0.5910</td><td>0.4568</td><td><b>0.6341</b></td>
+    <td rowspan="3" style="font-weight:bold; color:green;">+8.3%</td>
+    <td>0.8093</td><td>0.8574</td><td>0.7474</td><td><b>0.8598</b></td>
+    <td rowspan="3" style="font-weight:bold; color:green;">+1.5%</td>
+  </tr>
+  <tr>
+    <td><b>Recall</b></td>
+    <td>0.4524</td><td>0.5107</td><td>0.5031</td><td><b>0.5570</b></td>
+    <td>0.6830</td><td>0.7108</td><td>0.8048</td><td><b>0.7293</b></td>
+  </tr>
+  <tr>
+    <td><b>F₁</b></td>
+    <td>0.4793</td><td>0.5479</td><td>0.4788</td><td><b>0.5931</b></td>
+    <td>0.7408</td><td>0.7773</td><td>0.7750</td><td><b>0.7892</b></td>
+  </tr>
+</table>
+
 
 #### Table II. Average Pass Rate for Each Method
 
