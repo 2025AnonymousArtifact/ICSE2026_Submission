@@ -40,6 +40,8 @@ We conduct experiments on six datasets, with their statistics summarized as foll
   <p><em>Figure 6. Generated Result by AutoBM</em></p>
 </div>
 
+Also, you can find detailed prompt examples we crafted in [Examples Used in Prompting](./examples_in_prompt.md)
+
 ### Tools Requirements
 - PlantUML: plantuml-1.2025.4.jar
 - StanfordNLP: CoreNLP 4.5.10
