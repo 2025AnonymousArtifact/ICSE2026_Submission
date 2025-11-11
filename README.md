@@ -220,9 +220,6 @@ Also, you can find detailed prompt examples we crafted in [Examples Used in Prom
 <br>
 <div align="center">
   <img src="Figures/llm.png" alt="Different Base Models" width="80%"/>
-  <img src="Figures/node.png" alt="Different Base Models" width="80%"/>
-  <img src="Figures/rel.png" alt="Different Base Models" width="80%"/>
-  <img src="Figures/passrate.png" alt="Different Base Models" width="80%"/>
   <p><em>Figure 7. Performance comparison of AutoBM with different base models. Indicators A–G correspond to the Precision, Recall, and F1 score for both nodes and relations, along with the overall Pass Rate. The value in brackets indicates the highest score achieved in the current comparison.</em></p>
 </div>
 
