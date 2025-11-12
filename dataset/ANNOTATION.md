@@ -1,4 +1,4 @@
-# A Note on Inter-Annotator Agreement and Annotation Principles
+# Note on Annotation
 
 This document supplements the dataset section of our paper.  
 It provides detailed information on the annotation objectives, guiding principles, annotator workflow, and inter-annotator agreement used in constructing the datasets.
