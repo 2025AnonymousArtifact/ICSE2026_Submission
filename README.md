@@ -249,12 +249,12 @@ Also, you can find detailed prompt examples we crafted in [Examples Used in Prom
 | gpt-4        | 30.00                 | 60.00                  | 283.00            |
 | gpt-4.1      | 2.00                  | 8.00                   | 101.00            |
 | gpt-4o       | 2.50                  | 10.00                  | 94.00             |
-| qwen3-8b     | 0.07                  | 0.28                   | 96.00             |
-| qwen3-14b    | 0.14                  | 0.56                   | 228.00            |
-| qwen3-32b    | 0.28                  | 1.12                   | 137.00            |
+| qwen3-8b     | 0.18                  | 0.70                   | 96.00             |
+| qwen3-14b    | 0.35                  | 1.40                   | 228.00            |
+| qwen3-32b    | 0.16                  | 0.64                   | 137.00            |
 | glm-4-flash  | 0.00                  | 0.00                   | 175.00            |
 | glm-4-air    | 0.07                  | 0.28                   | 87.00             |
 | glm-4-plus   | 0.70                  | 2.80                   | 296.00            |
-| deepseek-v3  | 0.56                  | 1.68                   | 168.00            |
+| deepseek-v3  | 0.28                  | 0.42                   | 168.00            |
 
 </div>
