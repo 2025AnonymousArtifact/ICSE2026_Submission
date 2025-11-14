@@ -60,12 +60,12 @@ All annotators contributed to guideline refinement through iterative feedback an
 ## 5. Inter-Annotator Agreement
 
 Inter-annotator agreement was quantified using **Cohen’s kappa** on the overlapping subset of annotations.  
-The agreement consistently **exceeded 0.8 across all annotation dimensions**, demonstrating strong consistency and reliability.
+The agreement consistently **exceeded 0.8 across all annotation dimensions**.
 
 | Annotation Dimension | Cohen’s κ | Agreement Level |
 |----------------------|-----------|----------------|
 | Activity Extraction | 0.83 | High |
 | Relation Labeling | 0.81 | High |
-| Control Structure Identification | 0.84 | High |
+| Nested Control Structure Identification | 0.87 | High |
 
 Discrepancies were generally caused by differences in interpreting nested or parallel behaviors and were resolved through group discussion.
