@@ -9,7 +9,7 @@ This is an anonymous artifact repository used for ICSE 2026
 </div>
 
 ### Abstract
-As software complexity skyrockets and requirements evolve at breakneck speed, traditional human-centric behavioral modeling can no longer keep pace in terms of efficiency, accuracy, and scalability. While existing automated approaches can produce models, they still struggle with deep semantic understanding of textual requirements or with reasoning about intricate system logic, especially nested relationships. Inspired by the way seasoned analysts “peel back” layers of a problem, we propose **AutoBM**, an LLM-based framework that incrementally extracts behavioral nodes, dissects their hierarchical relations, and synthesizes them into executable, interpretable UML activity diagrams. Comprehensive evaluations on four open‑source datasets and two real‑world industrial systems show that AutoBM comprehensively outperforms state-of-the-art baselines in accuracy, completeness, and syntactic compliance: _F₁_ scores for behavioral node-extraction improve by up to 71.1 %, relation-extraction _F₁_ by 52.4 % relatively, and syntactic pass rates remain above 96.7 %. The framework also exhibits strong robustness to input perturbations, confirming its cross-domain generalizability. This paper is the first to tightly fuse human-inspired strategies with LLMs in behavior modeling, yielding an intelligent infrastructure that exhibits human-level logical understanding and generalization. By closing the modeling-skills gap, AutoBM delivers a next-generation, low-cost, and explainable solution for requirements engineering and AI-native software development.
+As software complexity skyrockets and requirements evolve at breakneck speed, traditional human-centric behavioral modeling can no longer keep pace in terms of efficiency, accuracy, and scalability. While existing automated approaches can produce models, they still struggle with deep semantic understanding of textual requirements or with reasoning about intricate system logic, especially nested relationships. Inspired by the way seasoned analysts “peel back” layers of a problem, we propose LATO, a Layerwise Analysis-driven auTomatic behavioral mOdeling approach. It employs a progressive decomposition strategy to guide large language models in incrementally parsing requirement structures, deconstructing behavioral dependencies, and ultimately generating executable UML activity diagrams. Comprehensive evaluations on four open‑source datasets and two real‑world industrial systems show that LATO comprehensively outperforms state-of-the-art baselines in accuracy, completeness, and syntactic compliance: _F₁_ scores for behavioral node-extraction improve by up to 71.1 %, relation-extraction _F₁_ by 52.4 % relatively, and syntactic pass rates remain above 96.7 %. The framework also exhibits strong robustness to input perturbations, confirming its cross-domain generalizability. This paper is the first to tightly fuse human-inspired strategies with LLMs in behavior modeling, yielding an intelligent infrastructure that exhibits expert-level logical understanding and generalization. By closing the modeling-skills gap, LATO delivers a next-generation, low-cost, and explainable solution for requirements engineering and AI-native software development.
 
 ### Dataset
 We conduct experiments on six datasets, with their statistics summarized as follows:
@@ -32,12 +32,12 @@ We conduct experiments on six datasets, with their statistics summarized as foll
   <img src="Figures/integrate.png" width="30%" />
 </p>
 
-<p align="center"><em>Figure 3–5. Step Prompt Template for AutoBM</em></p>
+<p align="center"><em>Figure 3–5. Step Prompt Template for LATO</em></p>
 
 ### Generated Result Example
 <div align="center">
   <img src="Figures/result.png" width="75%" alt="" />
-  <p><em>Figure 6. Generated Result by AutoBM</em></p>
+  <p><em>Figure 6. Generated Result by LATO</em></p>
 </div>
 
 Also, you can find detailed prompt examples we crafted in [Examples Used in Prompting](./examples_in_prompt.md)
@@ -64,8 +64,8 @@ Also, you can find detailed prompt examples we crafted in [Examples Used in Prom
     <th rowspan="2">Gain%</th>
   </tr>
   <tr>
-    <th>Zero-shot</th><th>Few-shot</th><th>CoT</th><th><b>AutoBM</b></th>
-    <th>Zero-shot</th><th>Few-shot</th><th>CoT</th><th><b>AutoBM</b></th>
+    <th>Zero-shot</th><th>Few-shot</th><th>CoT</th><th><b>LATO</b></th>
+    <th>Zero-shot</th><th>Few-shot</th><th>CoT</th><th><b>LATO</b></th>
   </tr>
 
   <!-- FSD -->
@@ -192,7 +192,7 @@ Also, you can find detailed prompt examples we crafted in [Examples Used in Prom
 
 #### Table II. Average Pass Rate for Each Method
 
-| Dataset | Zero-shot | Few-shot | CoT    | **AutoBM** |
+| Dataset | Zero-shot | Few-shot | CoT    | **LATO** |
 |:-------:|:---------:|:--------:|:------:|:----------:|
 | FSD     |   0.8261  |  0.9429  | 0.9321 | **0.9679** |
 | RAC     |   0.9672  |  0.9545  | 0.9560 | **0.9708** |
@@ -201,7 +201,7 @@ Also, you can find detailed prompt examples we crafted in [Examples Used in Prom
 | US      |   0.9814  |  0.9506  | 0.9257 | **0.9914** |
 | LMC     |   0.9879  |  0.9750  | 0.9743 | **0.9936** |
 
-#### Table III. The Performance Score of AutoBM with Different Base Models
+#### Table III. The Performance Score of LATO with Different Base Models
 
 | LLM             | N‑Precision | N‑Recall | N‑F₁  | R‑Precision | R‑Recall | R‑F₁  | Pass Rate |
 |:---------------:|:-----------:|:--------:|:-----:|:-----------:|:--------:|:-----:|:---------:|
@@ -209,24 +209,24 @@ Also, you can find detailed prompt examples we crafted in [Examples Used in Prom
 | `gpt-4o`        | **0.6961**  | 0.8259   |0.7555 | **0.5319**  | 0.5310   |0.5314 | 0.8826    |
 | `gpt-4.1`       | 0.6534      |**0.9091**|**0.7603**|0.5101    |**0.5896**|**0.5470**|**0.9587**|
 | `qwen3-8b`      | 0.6007      | 0.7812   | 0.6792| 0.3467      | 0.4198   | 0.3797| 0.8574    |
-| `qwen3-14b`     | 0.4075      | 0.7704   | 0.5330| 0.3186      | 0.4160   | 0.3608| **0.9482**|
-| `qwen3-32b`     |**0.6204**   | 0.7581   |**0.6824**|**0.4172**|**0.4515**|**0.4337**|0.9206   |
+| `qwen3-14b`     | 0.4075      | 0.7704   | 0.5330| 0.3186      | 0.4160   | 0.3608| 0.9482|
+| `qwen3-32b`     | 0.6204      | 0.7581   |0.6824 | 0.4172      |0.4515    |0.4337|0.9206   |
 | `glm-4-flash`   | 0.5719      | 0.7535   | 0.6503| 0.3922      | 0.4389   | 0.4142| 0.8734    |
-| `glm-4-air`     |**0.6943**   | 0.7735   |**0.7318**|**0.4771**|0.4020   | 0.4364|**0.9548**|
-| `glm-4-plus`    | 0.6181      |**0.8105**| 0.7013| 0.4105      |**0.4841**|**0.4443**|0.9392   |
+| `glm-4-air`     | 0.6943      | 0.7735   |0.7318 |0.4771       |0.4020    | 0.4364|0.9548|
+| `glm-4-plus`    | 0.6181      |0.8105    | 0.7013| 0.4105      |0.4841    |0.4443 |0.9392   |
 
 </div>
 
 <br>
 <div align="center">
   <img src="Figures/llm.png" alt="Different Base Models" width="80%"/>
-  <p><em>Figure 7. Performance comparison of AutoBM with different base models. Indicators A–G correspond to the Precision, Recall, and F1 score for both nodes and relations, along with the overall Pass Rate. The value in brackets indicates the highest score achieved in the current comparison.</em></p>
+  <p><em>Figure 7. Performance comparison of LATO with different base models. Indicators A–G correspond to the Precision, Recall, and F1 score for both nodes and relations, along with the overall Pass Rate. The value in brackets indicates the highest score achieved in the current comparison.</em></p>
 </div>
 
 
 <div align="center">
   
-#### Table IV. The Performance Scores of AutoBM with Different Example Seeds
+#### Table IV. The Performance Scores of LATO with Different Example Seeds
 
 | Seed   | N‑Precision | N‑Recall | N‑F₁  |         | R‑Precision | R‑Recall | R‑F₁  |         | Pass Rate |        |
 |:------:|:-----------:|:--------:|:-----:|:-------:|:-----------:|:--------:|:-----:|:-------:|:---------:|:------:|
@@ -238,7 +238,7 @@ Also, you can find detailed prompt examples we crafted in [Examples Used in Prom
 
 | Configuration            | N‑Precision | N‑Recall | N‑F₁  |         | R‑Precision | R‑Recall | R‑F₁  |         | Pass Rate |        |
 |:------------------------:|:-----------:|:--------:|:-----:|:-------:|:-----------:|:--------:|:-----:|:-------:|:---------:|:------:|
-| **AutoBM**               | 0.6905      | 0.8320   | 0.7547| --      | 0.5008      | 0.5142   | 0.5074| --      | 0.9708    | --     |
+| **LATO**               | 0.6905      | 0.8320   | 0.7547| --      | 0.5008      | 0.5142   | 0.5074| --      | 0.9708    | --     |
 | _w/o Identifier_         | 0.6356      | 0.7257   | 0.6777| _10.20 %↓_| 0.4178      | 0.4003   | 0.4089| _19.41 %↓_| 0.9614    | _0.97 %↓_ |
 | _w/o Extractor_          | 0.6232      | 0.7288   | 0.6719| _10.97 %↓_| 0.3919      | 0.3886   | 0.3902| _23.10 %↓_| 0.9592    | _1.19 %↓_ |
 | _w/o Constructor_        | 0.6019      | 0.6687   | 0.6336| _16.05 %↓_| 0.3519      | 0.3283   | 0.3397| _33.06 %↓_| 0.9316    | _4.04 %↓_ |
