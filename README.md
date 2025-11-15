@@ -28,11 +28,9 @@ We conduct experiments on six datasets, with their statistics summarized as foll
 
 <p align="center">
   <img src="Figures/identify.png" width="30%" />
-  <img src="Figures/decompose.png" width="30%" />
-  <img src="Figures/integrate.png" width="30%" />
 </p>
 
-<p align="center"><em>Figure 3–5. Step Prompt Template for LATO</em></p>
+<p align="center"><em>Figure 3. Example Prompt Template for Key Activity Identifier</em></p>
 
 ### Generated Result Example
 <div align="center">
@@ -220,7 +218,7 @@ Also, you can find detailed prompt examples we crafted in [Examples Used in Prom
 <br>
 <div align="center">
   <img src="Figures/llm.png" alt="Different Base Models" width="80%"/>
-  <p><em>Figure 7. Performance comparison of LATO with different base models. Indicators A–G correspond to the Precision, Recall, and F1 score for both nodes and relations, along with the overall Pass Rate. The value in brackets indicates the highest score achieved in the current comparison.</em></p>
+  <p><em>Figure 4. Performance comparison of LATO with different base models. Indicators A–G correspond to the Precision, Recall, and F1 score for both nodes and relations, along with the overall Pass Rate. The value in brackets indicates the highest score achieved in the current comparison.</em></p>
 </div>
 
 
